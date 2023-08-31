@@ -15,7 +15,7 @@
       <nav>
         <input type="checkbox" id="check" class="toggle">
         <label for="check" class="checkbtn">
-          =
+          <i class="fa-solid fa-bars"></i>
         </label>
         <h2 class="logo">Eric</h2>
         <ul>
@@ -61,7 +61,7 @@
         <div class="about-header">
           <div class="section-title">
             <h3 class="dark-color text-uppercase" >About Me</h3>
-            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Canada</p>
+            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
         </div>
         </div>
         <div class="about-content">
@@ -106,7 +106,7 @@
                     </div>
                     <div class="media">
                         <label>Residence</label>
-                        <p>Canada</p>
+                        <p>Rwanda</p>
                     </div>
                     <div class="media">
                         <label>Address</label>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="media">
                     <label>Residence</label>
-                    <p>Canada</p>
+                    <p>Rwanda</p>
                 </div>
                 <div class="media">
                     <label>Address</label>
@@ -144,7 +144,7 @@
         <div class="about-header">
           <div class="section-title">
             <h3 class="dark-color text-uppercase" >My skills</h3>
-            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Canada</p>
+            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
         </div>
         </div>
         <div class="skills-content">
@@ -235,7 +235,7 @@
         <div class="about-header">
           <div class="section-title">
             <h3 class="dark-color text-uppercase" >My Services</h3>
-            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Canada</p>
+            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
         </div>
         </div>
         <div class="services-row">
@@ -308,12 +308,68 @@
             </div>
         </div>
     </section>
+
+    <section class="work-section" id="portfolio">
+      <div class="about-container">
+       <div class="about-header">
+         <div class="section-title">
+           <h3 class="dark-color text-uppercase" >LATEST WORK</h3>
+           <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
+       </div>
+       </div>
+          <div class="work-container">
+            <div class="card">
+              <img src="images/folio/4.jpg" alt="Card Image 1">
+              <div class="hover-content">
+                <h1>Heading 1</h1>
+                <p>Hover over the card to see this text.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/folio/5.jpg" alt="Card Image 1">
+              <div class="hover-content">
+                <h1>Heading 1</h1>
+                <p>Hover over the card to see this text.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/folio/4.jpg" alt="Card Image 1">
+              <div class="hover-content">
+                <h1>Heading 1</h1>
+                <p>Hover over the card to see this text.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/folio/3.jpg" alt="Card Image 1">
+              <div class="hover-content">
+                <h1>Heading 1</h1>
+                <p>Hover over the card to see this text.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/folio/5.jpg" alt="Card Image 1">
+              <div class="hover-content">
+                <h1>Heading 1</h1>
+                <p>Hover over the card to see this text.</p>
+              </div>
+    </div>
+            <div class="card">
+              <img src="images/folio/3.jpg" alt="Card Image 1">
+              <div class="hover-content">
+                <h1>Heading 1</h1>
+                <p>Hover over the card to see this text.</p>
+              </div>
+    </div>
+          </div>
+      </div>
+   </section>
+
     <section class="testimonials-section" id="services">
       <div class="about-container">
         <div class="about-header">
           <div class="section-title">
             <h3 class="dark-color text-uppercase" >testimonial</h3>
-            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Canada</p>
+            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
         </div>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -413,7 +469,7 @@
         <div class="about-header">
           <div class="section-title">
             <h3 class="dark-color text-uppercase" >LATEST BLOGS</h3>
-            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Canada</p>
+            <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
         </div>
         </div>
           <div class="blog-container">
@@ -482,6 +538,49 @@
                     </div>
                 </div> 
             </div>
+            <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="m-btn-blog m-btn-theme">Add Blog</button>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" id="blogInput" onsubmit="handleSubmitBlog(event)">
+            <div class="blog-modal-container">
+              <div class="model-header">
+                <h4>ADD NEW BLOG</h4>
+              </div>
+              <div class="close-icon">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+              </div>
+               
+            </div>
+            <div class="modal-form">
+                <label>Image</label>
+                <div class="form-group">
+                  <input type="file" id="blogImage"  required>
+                </div>
+                <label>Title</label>
+                <div class="form-group">
+                <input type="text" placeholder="Title" class="form-control" id="title" required>
+                </div>
+                <label>Description</label>
+                <div class="form-group">
+                  <textarea type="text" placeholder="Description" name="description" class="form-control" id="description" required></textarea>
+                </div>
+                
+                <button type="submit" class="m-btn-blog m-btn-theme">Add Blog</button>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        var modal = document.getElementById('id01');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+
+        }
+
+    </script> -->
         </div>
           
         </div>
@@ -491,7 +590,7 @@
     <div class="about-header">
       <div class="section-title">
         <h3 class="dark-color text-uppercase" >GET IN TOUCH</h3>
-        <p class="text-uppercase small">A Lead UX &amp; UI designer based in Canada</p>
+        <p class="text-uppercase small">A Lead UX &amp; UI designer based in Rwanda</p>
     </div>
     </div>
         <div class="rowcontact">
@@ -500,42 +599,50 @@
                   <div class="contact-form box-shadow">
                       <h4 class="dark-color font-alt m-20px-b">Say Something</h4>
                     <!-- javascript -->
-                     <script src="script.js"></script>
-                      <form class="rowform">
+                    
+                    <div class="rowform">
+                      <!-- <form class="rowform" action="#" method="post" onsubmit = "return formvalidation()" > -->
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <input name="fullname" id="name" placeholder="Name *" class="form-control email" type="text" value="">
+                                  <input name="fullname" id="fullname" placeholder="Name *" class="form-control email" type="text" value="">
+                                  <p class="errorMessage" id="error_name"></p>
                                   <span class="input-focus-effect theme-bg"></span>
-                                  <span class="errorMessage" id="error_name"></span>
+                                  
                                   
                               </div>
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
                                   <input name="email" id="email" placeholder="Email *" class="form-control " type="email" value="">
+                                  <p class="errorMessage" id="error_email"></p>
                                   <span class="input-focus-effect theme-bg"></span>
                               </div>
                           </div>
                           <div class="col-12">
                               <div class="form-group">
                                   <input name="subject" id="subject" placeholder="Subject *" class="form-control " type="text" value="">
+                                  <p class="errorMessage" id="error_subject"></p>
                                   <span class="input-focus-effect theme-bg"></span>
+                                  
                               </div>
                           </div><br>
                           <div class="col-md-12">
                               <div class="form-group">
                                   <textarea name="message" id="message" placeholder="Your message *" rows="3" class="form-control "></textarea>
+                                  <p class="errorMessage" id="error_message"></p>
                                   <span class="input-focus-effect theme-bg"></span>
+                                  
                               </div>
                           </div>
                           <div class="col-md-12">
                               <div class="send">
-                                  <button class="m-btn m-btn-theme" type="submit" value="Send"> send message</button>
+                                  <button class="m-btn m-btn-theme" type="submit" onclick="formvalidation()"> send message</button>
                               </div>
                               <span id="suce_message" class="text-success" style="display: none;">Message Sent Successfully</span>
                           </div>
-                      </form>
- 
+                      <!-- </form> -->
+                      </div>
+
                   </div>
               </div>
           </div>
@@ -581,9 +688,10 @@
       </div>
     </div>
 </footer>
+<script src="script/script.js"></script>
  <!-- swiper js -->
  <script src="script/swiper-bundle.min.js"></script>
  <!-- javascript -->
- <script src="script/script.js"></script>
+ <script src="script/slide.js"></script>
   </body>
 </html>

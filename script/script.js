@@ -1,31 +1,10 @@
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  // grabCursor: true,
-  // slidesPerGroup: 1,
-  loop: true,
-  // loopFillGroupWithBlank: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: "auto",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 let error = 0;
 let emailpattern = /[a-zA-Z0-9_.]{2,20}[@][a-zA-Z]{2,10}[.][a-zA-Z]{2,5}/;
 let fullname = document.getElementById("fullname");
-let subject = document.getElementById("subject");
 let email = document.getElementById("email");
-let phone = document.getElementById("phone");
-let message = document.getElementById("message");
-var regPhone=/^\d{10}$/;                                        
+let subject = document.getElementById("subject");
+// let phone = document.getElementById("phone");
+let message = document.getElementById("message");                                  
 var regName = /\d+$/g;  
 
 //declaration of error messages
@@ -34,7 +13,7 @@ function formvalidation() {
   validateName();
   validateSubject();
   validateEmail();
-  validatePhone();
+  // validatePhone();
   validateMessage();
   if (error == 0) {
     alert("Message sent successfully");
@@ -94,70 +73,74 @@ function validateMessage(){
 }
 
 
-function handleSubmitBlog(e) {
-  let inputEl = document.getElementById('blogImage');
-    let file = inputEl.files[0];
-    let fr = new FileReader();
-    fr.readAsDataURL(file);
-    fr.addEventListener('load', () => {
-      let images = fr.result
+// function handleSubmitBlog(e) {
+//   let inputEl = document.getElementById('blogImage');
+//     let file = inputEl.files[0];
+//     let fr = new FileReader();
+//     fr.readAsDataURL(file);
+//     fr.addEventListener('load', () => {
+//       let images = fr.result
 
-      var ourform = document.getElementById("blogInput");
-      var title = ourform["title"].value;
-      var description = ourform["description"].value;
+//       var ourform = document.getElementById("blogInput");
+//       var title = ourform["title"].value;
+//       var description = ourform["description"].value;
 
-      if (localStorage.getItem("blogs") == null) {
-        let array = [];
-        let blog = {
-          id: 1,
-          title,
-          images,
-          description
-        }
-        array.push(blog);
-        localStorage.setItem("blogs", JSON.stringify(array));
-        window.alert("New Blog added successfuly");
+//       if (localStorage.getItem("blogs") == null) {
+//         let array = [];
+//         let blog = {
+//           id: 1,
+//           title,
+//           images,
+//           description
+//         }
+//         array.push(blog);
+//         localStorage.setItem("blogs", JSON.stringify(array));
+//         window.alert("New Blog added successfuly");
 
 
-      } else {
+//       } else {
 
-        let array = JSON.parse(localStorage.getItem("blogs"));
-        let blog = {
-          id: (array.length + 1),
-          title,
-          images,
-          description
-        }
-        array.push(blog);
-        localStorage.setItem("blogs", JSON.stringify(array));
-        window.alert("Blog added successfuly");
+//         let array = JSON.parse(localStorage.getItem("blogs"));
+//         let blog = {
+//           id: (array.length + 1),
+//           title,
+//           images,
+//           description
+//         }
+//         array.push(blog);
+//         localStorage.setItem("blogs", JSON.stringify(array));
+//         window.alert("Blog added successfuly");
 
-      }
-    })
-  let editBlog = (blogId) => {
-    console.log(blo)
-    let array = JSON.parse(localStorage.getItem("blogs"));
-    array.map((item) => {
-      if (blogId == item.id) {
-        item.title = "New Value"
-      }
-    })
-    localStorage.setItem("blogs", JSON.stringify(array));
-  }
-}
+//       }
+//     })
+//   let editBlog = (blogId) => {
+//     console.log(blo)
+//     let array = JSON.parse(localStorage.getItem("blogs"));
+//     array.map((item) => {
+//       if (blogId == item.id) {
+//         item.title = "New Value"
+//       }
+//     })
+//     localStorage.setItem("blogs", JSON.stringify(array));
+//   }
+// }
 
-let getBlogs = () => {
-  //localStorage.removeItem("blogs");
-  var result = localStorage.getItem("test");
+// let getBlogs = () => {
+//   //localStorage.removeItem("blogs");
+//   var result = localStorage.getItem("test");
 
-  var fromStorage = localStorage.getItem("blogs");
-  var blogsResult = JSON.parse(fromStorage);
-  if (blogsResult) {
-    document.getElementById("blogOutputs").innerHTML = blogsResult.map((item) =>`<div class="blogCard"><img src="${item.images}"/><h5>${item.title}</h5><p>${item.description}</p></div>`);
-  }
+//   var fromStorage = localStorage.getItem("blogs");
+//   var blogsResult = JSON.parse(fromStorage);
+//   if (blogsResult) {
+//     document.getElementById("blogOutputs").innerHTML = blogsResult.map((item) =>`<div class="blogCard"><img src="${item.images}"/><h5>${item.title}</h5><p>${item.description}</p></div>`);
+//   }
 
-}
-getBlogs();
+// }
+// getBlogs();
+
+
+
+
 //console.log(localStorage.getItem("blogs"));
 /* <button onclick="editBlog(${item.id})">Edit</button> */
 // function sendEmail(){
